@@ -10,6 +10,7 @@ import {
   TextInput,
   useColorScheme,
   View,
+  Linking,
 } from 'react-native';
 
 import {
@@ -34,6 +35,8 @@ const PayWithUPI = () : JSX.Element => {
 
   const onClick = () => {
       console.log('on Click of Pay button')
+      const upiUrl = 'upi://pay?pa=testing_vpa@ybl&pn=testname&mc=0000&invoiceNo=1234'
+      Linking.openURL(upiUrl)
   }
 
   return (
